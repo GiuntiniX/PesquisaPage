@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde e Longevidade da Mulher 40+</title>
+    <!-- Carregamento do Tailwind CSS para estilo e responsividade --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de fonte global */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        
+        /* FUNDO CINZA MUITO CLARO */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Cinza muito claro */
+        }
+
+        .section-header {
+            border-bottom: 3px solid #e91e63; /* Cor Pink/Saúde */
+            padding-bottom: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        .metric-highlight {
+            font-weight: 800;
+            color: #e91e63; /* Pink para destaque */
+        }
+        .metric-box {
+            transition: transform 0.3s ease;
+        }
+        .metric-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .brand-bar-container {
+            height: 20px;
+            background-color: #fce7f3; /* Rosa muito claro */
+            border-radius: 9999px;
+            margin-bottom: 4px;
+            overflow: hidden;
+        }
+        .brand-bar {
+            height: 100%;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .text-custom-pink { color: #e91e63; }
+
+        /* Estilo para as logos no cabeçalho (Fundo transparente) */
+        .header-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            /* Fundo da div de logos transparente (deixa o degradê do body aparecer) */
+            background: none; 
+            border-bottom: 1px solid #ddd;
+        }
+        /* Garantindo que não haja filtros em nenhuma das logos */
+        .header-logos img {
+            filter: none; /* Garante que a logo use suas cores originais */
+        }
+
+        /* Estilos do Banner (Estático) */
+        #image-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="min-h-screen pt-12 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto">
+        
+        <!-- CABEÇALHO --><header class="mb-16 relative">
+            
+            <!-- LOGOS: Fundo Transparente --><div class="header-logos px-4 sm:px-0">
+                <!-- Logo Terra --><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Terra_Logo.png/250px-Terra_Logo.png" alt="Logo Terra" class="terra-logo h-12 sm:h-14 w-auto">
+                
+                <!-- Nova Logo de Insights (Light Version) --><img src="https://p2.trrsf.com/image/fget/cf/259/80/images.terra.com/2025/01/08/insights-light-qdvhzhm8n3hi.png" alt="Terra Insights Logo" class="new-insights-logo h-12 sm:h-14 w-auto">
+            </div>
+            
+            <!-- BANNER DE IMAGEM ESTÁTICA --><div id="image-banner" class="w-full h-48 sm:h-64 bg-cover bg-center rounded-xl overflow-hidden shadow-lg mb-8 mt-8" 
+                 style="background-image: url('https://s2-g1.glbimg.com/JbEgAXpJK63T1Jg_9f0eZYn71co=/0x0:626x418/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/h/R/ZO7XJWSbKAemA3ojNpHA/alimentacao-saudavel.jpg'); background-size: cover; background-repeat: no-repeat;">
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-10 mb-4 tracking-tight text-center md:text-left">
+                Saúde e Longevidade da Mulher 40+
+            </h1>
+            <p class="text-xl text-gray-600 text-center md:text-left">
+                Panorama de consumo, bem-estar e perfil decisor de compra no contexto do envelhecimento ativo.
+            </p>
+
+            <!-- RESUMO E METODOLOGIA --><div class="bg-white p-6 rounded-xl shadow-md mt-6 border-t-4 border-pink-400">
+                <h2 class="text-2xl font-bold text-gray-800 mb-3">Resumo Executivo</h2>
+                <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+                    O público-alvo de Saúde e Bem-Estar no Terra é composto por <span class="font-bold text-pink-600">15,5 MM de mulheres</span>, majoritariamente acima dos 40 anos e responsáveis pelas decisões de compra do lar (<span class="font-bold">12,9 MM são a Principal Compradora</span>). Este grupo é proativo em relação à saúde, valorizando a prevenção e investindo em soluções de qualidade (medicamentos, suplementos e cosméticos). Os principais motivadores são a gestão da longevidade, o controle de doenças crônicas (diabetes, colesterol) e a busca por soluções práticas que se encaixem em uma rotina agitada. O consumo de mídia é altamente digital e busca informação confiável.
+                </p>
+                <p class="text-gray-500 text-xs italic mt-4">
+                    <span class="font-bold">Metodologia:</span> O levantamento foi realizado via plataforma mobile e seguiu critérios demográficos do IBGE e dados de Comscore PlanMetrix.
+                </p>
+            </div>
+        </header>
+
+        <!-- SEÇÃO 1: PERFIL DEMOGRÁFICO E PODER DE COMPRA --><section id="perfil-demografico" data-section="animated" class="mb-24">
+            <h2 class="text-3xl font-bold section-header text-custom-pink">1. Perfil Demográfico: A Mulher 40+ no Centro das Decisões</h2>
+            
+            <!-- Destaques Chave (Big Numbers) --><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Público-Alvo Total</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter1" data-target="15.5" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Total de pessoas com foco em saúde, bem-estar e qualidade de vida.
+                    </p>
+                </div>
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Principal Compradora</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter2" data-target="12.9" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Mulheres que detêm o poder de decisão nas compras de saúde e do lar.
+                    </p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Foco Familiar</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter3" data-target="6.27" data-decimals="2" class="metric-highlight">0.00</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Presença de seniores (65-75 anos) no domicílio, influenciando o foco em saúde.
+                    </p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Familiar e Apegada</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter4" data-target="14.6" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Consideram o lar o melhor lugar do mundo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Insights Demográficos Adicionais --><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-700">Composição Civil e Renda</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
+                        <li><span class="font-bold">Casadas (5,34 MM)</span> é o maior grupo, mas Divorciadas (2,25 MM) e Viúvas (2,27 MM) são expressivas.</li>
+                        <li>Forte presença de adultos <span class="font-bold">45-54 anos (8,65 MM)</span>.</li>
+                        <li>Renda Familiar concentrada em <span class="font-bold">R$4,5 MM a R$8,9 MM (2,76 MM)</span> e <span class="font-bold">R$3,0 MM a R$4,4 MM (2,32 MM)</span>, indicando poder de compra.</li>
+                        <li><span class="font-bold">Evento Recente:</span> 1,4 MM presenciaram o nascimento de netos (novo papel de avó).</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                    <h3 class="font-bold text-xl mb-2 text-yellow-700">Insight: Abordagem da Maturidade</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        O público está em uma fase de vida de grande complexidade familiar (cuidando de netos e seniores) e pessoal (transição 40+). O conteúdo deve abordar saúde e bem-estar de forma holística, refletindo as <span class="font-bold text-yellow-900">múltiplas funções da mulher madura</span>, com foco na prevenção e longevidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: FOCO EM SAÚDE E BEM-ESTAR (DIETAS E SUPLEMENTOS) --><section id="saude-bem-estar" data-section="animated" class="mb-24">
+            <h2 class="text-3xl font-bold section-header text-custom-pink">2. Prioridades de Saúde: Prevenção, Dieta e Suplementação</h2>
+            
+            <!-- Rankings de Dieta e Suplementos --><div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <!-- Ranking Motivos de Controle de Dieta --><div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Controle de Dieta (6,0 MM): Principais Motivos</h3>
+                    <div id="diet-ranking-chart" data-ranking="animated" class="space-y-4">
+                        <!-- Max: 4.38 --><div class="ranking-item" data-value="4.38" data-max="4.38" data-label="Perda de Peso" data-color="bg-pink-600"></div>
+                        <div class="ranking-item" data-value="1.50" data-max="4.38" data-label="Colesterol Baixo" data-color="bg-pink-500"></div>
+                        <div class="ranking-item" data-value="1.20" data-max="4.38" data-label="Diabetes" data-color="bg-pink-400"></div>
+                        <div class="ranking-item" data-value="2.76" data-max="4.38" data-label="Controlam Dieta > 3 Anos" data-color="bg-pink-300"></div>
+                    </div>
+                </div>
+
+                <!-- Ranking Uso de Vitaminas e Suplementos --><div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Uso de Suplementos (3,8 MM): Mais Populares</h3>
+                    <div id="supplement-ranking-chart" data-ranking="animated" class="space-y-4">
+                        <!-- Max: 1.50 --><div class="ranking-item" data-value="1.50" data-max="1.50" data-label="Multivitamínicos" data-color="bg-green-600"></div>
+                        <div class="ranking-item" data-value="1.20" data-max="1.50" data-label="Vitamina D" data-color="bg-green-500"></div>
+                        <div class="ranking-item" data-value="0.91" data-max="1.50" data-label="Ômega 3" data-color="bg-green-400"></div>
+                        <div class="ranking-item" data-value="2.60" data-max="1.50" data-label="Consomem Diariamente/Mais" data-color="bg-green-300"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destaques de Atitude em Saúde --><div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Prontidão para Investir</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter5" data-target="13.9" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Afirmam que pagariam o que for necessário pela saúde.</p>
+                </div>
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Foco em Prevenção</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter6" data-target="10.8" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Realizam Check-ups periódicos mesmo se sentindo bem.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Maior Categoria de Compra</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter7" data-target="8.3" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Compram medicamentos em farmácias (principal categoria de compra).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: COMPORTAMENTO DE CONSUMO E FIDELIDADE --><section id="comportamento-consumo" data-section="animated" class="mb-24 bg-gray-50 p-8 rounded-xl shadow-inner">
+            <h2 class="text-3xl font-bold section-header text-gray-700 border-gray-400">3. Consumidora Consciente: Economia, Qualidade e Planejamento</h2>
+            
+            <!-- Destaques de Sensibilidade de Preço e Qualidade --><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Sensibilidade a Preços</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter8" data-target="11.7" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Buscam os preços mais baixos ao fazer compras.</p>
+                </div>
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Qualidade Acima de Tudo</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter9" data-target="13.6" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Concordam que vale a pena pagar um pouco mais pela qualidade.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Fidelidade Flexível</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter10" data-target="9.5" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Comprariam outra marca se houvesse uma oferta especial.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Compra Racional</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter11" data-target="11.3" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Leem as informações nos rótulos/etiquetas antes de comprar.</p>
+                </div>
+            </div>
+
+            <!-- Insights de Marcas de Dor e Autocuidado --><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="font-bold text-xl mb-2 text-red-700">Dor e Desconforto Físico (Ponto de Atenção)</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li><span class="font-bold">Uso de Analgésicos:</span> 6,7 MM de usuários (L12M). Marcas líderes: <span class="font-bold">Dorflex (2,6 MM) e Tylenol (1,2 MM)</span>.</li>
+                        <li><span class="font-bold">Pomadas Musculares:</span> 5,0 MM de usuários. Marcas líderes: <span class="font-bold">Dorflex (2,2 MM) e Cataflam (940 Mil)</span>.</li>
+                        <li><span class="font-bold">Insight:</span> A dor é uma barreira para o envelhecimento ativo. Conteúdo sobre saúde articular e alívio da dor tem alto potencial de engajamento e conversão.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <h3 class="font-bold text-xl mb-2 text-teal-700">Rotina de Beleza e Autocuidado</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li><span class="font-bold">Cremes Corporais:</span> Uso de 11,2 MM. Vendas diretas dominam: <span class="font-bold">Natura (3,8 MM) e O Boticário (2,8 MM)</span>.</li>
+                        <li><span class="font-bold">Coloração Capilar:</span> Uso de 8,3 MM, com 4,5 MM aplicando em casa.</li>
+                        <li><span class="font-bold">Cremes Faciais:</span> 8,0 MM de usuários, com alta busca por anti-rugas/rejuvenescedores.</li>
+                        <li><span class="font-bold">Insight:</span> O discurso deve focar na <span class="text-teal-900">beleza simples e natural (13,0 MM)</span>, ligando a hidratação e o cuidado capilar ao ritual de relaxamento e autoestima.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEÇÃO 4: CONTEÚDO E ESTRATÉGIA DE MONETIZAÇÃO --><section id="estrategia-conteudo" data-section="animated" class="mb-24">
+            <h2 class="text-3xl font-bold section-header text-custom-pink">4. Oportunidades de Conteúdo e Estratégia de Longevidade Funcional</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Pilar 1: Saúde e Longevidade 40+ --><div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-pink-700">
+                    <h4 class="font-bold text-xl mb-2 text-pink-700">Pilar: Saúde e Longevidade Funcional</h4>
+                    <p class="text-sm text-gray-700 mb-4">
+                        Foco em <span class="font-bold">saúde hormonal (menopausa)</span>, <span class="font-bold">saúde óssea</span> e <span class="font-bold">metabolismo</span>. O público ama aprender (<span class="text-custom-pink">14,8 MM</span>) e usa a internet para isso.
+                    </p>
+                    <ul class="text-xs text-gray-600 list-disc list-inside">
+                        <li>Criar conteúdo sobre "Beleza Metabólica".</li>
+                        <li>Receitas e nutrição para <span class="font-bold">Colesterol/Diabetes</span>.</li>
+                        <li>Exercícios essenciais de <span class="font-bold">Musculação 40+</span> (para combater sarcopenia).</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 2: Soluções Práticas para a Rotina --><div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-700">
+                    <h4 class="font-bold text-xl mb-2 text-blue-700">Pilar: Soluções Práticas e Alívio Rápido</h4>
+                    <p class="text-sm text-gray-700 mb-4">
+                        O público é proativo mas sente falta de tempo (<span class="text-custom-pink">11,1 MM</span>). O foco deve ser em eficiência e alívio rápido.
+                    </p>
+                    <ul class="text-xs text-gray-600 list-disc list-inside">
+                        <li>Rotinas de Autocuidado e Exercícios de <span class="font-bold">15 Minutos</span>.</li>
+                        <li>Conectar <span class="font-bold">Cremes Faciais</span> e <span class="font-bold">Rotinas Noturnas</span> à melhora do sono.</li>
+                        <li>Posicionar o Terra como fonte de informação <span class="font-bold">segura e verificada</span> (mitigando insegurança digital).</li>
+                    </ul>
+                </div>
+                
+                <!-- Pilar 3: Monetização e Parcerias --><div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-700">
+                    <h4 class="font-bold text-xl mb-2 text-yellow-700">Pilar: Monetização em Saúde (Farmácia)</h4>
+                    <p class="text-sm text-gray-700 mb-4">
+                        Com alto gasto em farmácias, a monetização por <span class="font-bold">parcerias diretas</span> é altamente promissora.
+                    </p>
+                    <ul class="text-xs text-gray-600 list-disc list-inside">
+                        <li>Foco em <span class="font-bold">Suplementos-Chave:</span> Multivitamínicos, Vitamina D, e Ômega 3.</li>
+                        <li>Promoção de <span class="font-bold">Ofertas Exclusivas</span> (que quebram a fidelidade, 9,5 MM).</li>
+                        <li>Ancorar conteúdo com <span class="font-bold">testemunhos autênticos</span> (Influência de celebridades é baixa).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: ESTILO DE VIDA, MÍDIA E HIGIENE FEMININA (Novos Insights) --><section id="estilo-midia" data-section="animated" class="mb-24 bg-gray-50 p-8 rounded-xl shadow-inner">
+            <h2 class="text-3xl font-bold section-header text-gray-700 border-gray-400">5. Estilo de Vida, Mídia e Higiene: O Cotidiano da Consumidora</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Métrica de Mídia --><div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Internet Fonte Primária</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter12" data-target="12.1" data-decimals="1" class="metric-highlight">0.0</span> MM
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Buscam a internet em primeiro lugar quando precisam de informação.</p>
+                </div>
+                
+                <!-- Insights de Estilo de Vida --><div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-pink-300">
+                    <h3 class="font-bold text-xl mb-2 text-pink-700">Rotina & Lar</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li>13,3 MM preferem uma <span class="font-bold">noite tranquila em casa</span>.</li>
+                        <li>10,1 MM <span class="font-bold">gostam de cozinhar</span>, alinhando-se ao controle de dieta.</li>
+                        <li>15,0 MM valorizam <span class="font-bold">estar bem informadas</span>.</li>
+                        <li>12,5 MM se preocupam com a <span class="font-bold">segurança de informações</span> pessoais online.</li>
+                    </ul>
+                </div>
+
+                <!-- Insights de Mídia e Engajamento --><div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-300">
+                    <h3 class="font-bold text-xl mb-2 text-blue-700">Engajamento Digital</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li>12,0 MM <span class="font-bold">verificam a fonte</span> das informações recebidas (necessidade de credibilidade).</li>
+                        <li>A <span class="font-bold">influência de celebridades é baixa</span> (11,3 MM discordam que influenciam a compra).</li>
+                        <li>12,2 MM tentam se manter <span class="font-bold">profissionalmente atualizadas</span>.</li>
+                        <li>11,4 MM usam redes sociais para <span class="font-bold">interagir com amigos</span> (Comunidade).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ranking de Higiene Íntima Feminina --><div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Higiene Íntima Feminina (Consumo 40+)</h3>
+                <div id="higiene-ranking-chart" data-ranking="animated" class="space-y-4">
+                    <!-- Max: 5.6 MM --><div class="ranking-item" data-value="5.60" data-max="5.60" data-label="Sabonete Íntimo" data-color="bg-purple-600"></div>
+                    <div class="ranking-item" data-value="4.30" data-max="5.60" data-label="Protetores Diários/Panty Liners" data-color="bg-purple-500"></div>
+                    <div class="ranking-item" data-value="2.50" data-max="5.60" data-label="Absorventes" data-color="bg-purple-400"></div>
+                </div>
+                <p class="mt-4 text-sm text-gray-600 italic">Insight: O alto uso de Sabonete Íntimo, comparado a Absorventes, sugere foco em cuidados específicos para a fase do climatério/menopausa.</p>
+            </div>
+        </section>
+
+        <!-- Rodapé --><footer class="mt-16 text-center text-xs text-gray-500 border-t pt-4 pb-8">
+            <p>&copy; 2025 Pesquisa Terra Insights: Consumo, Saúde e Qualidade de Vida. Dados Comscore.</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT DE ANIMAÇÃO --><script>
+        const ANIMATION_DURATION = 1500; 
+        let animatedSections = new Set();
+        
+        /**
+         * Animação de contagem para números em MM ou porcentagem.
+         */
+        function animateCounter(element, start, end, decimals) {
+            let startTime;
+            const step = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                const percentage = Math.min(progress / ANIMATION_DURATION, 1);
+                const current = percentage * (end - start) + start;
+                
+                element.textContent = current.toFixed(decimals);
+
+                if (progress < ANIMATION_DURATION) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    element.textContent = end.toFixed(decimals);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        /**
+         * Cria e anima as barras de ranking.
+         */
+        function initializeAndAnimateRanking(rankingContainer) {
+            if (animatedSections.has(rankingContainer.id)) return;
+            animatedSections.add(rankingContainer.id);
+
+            rankingContainer.querySelectorAll('.ranking-item').forEach(item => {
+                const val = parseFloat(item.getAttribute('data-value'));
+                const max = parseFloat(item.getAttribute('data-max'));
+                const label = item.getAttribute('data-label');
+                const color = item.getAttribute('data-color');
+                
+                // 1. Cria um ID seguro
+                const safeLabelId = label.replace(/[^a-zA-Z0-9]/g, ''); 
+                const targetId = `${item.parentElement.id}-${safeLabelId}-value`;
+                
+                // Calcula a largura de forma segura (máximo 100%)
+                const safeWidth = Math.min(100, (val / max) * 100);
+
+                // Cria a estrutura da barra
+                const barHtml = `
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-medium text-sm sm:text-lg">${label}</span>
+                        <span class="text-sm sm:text-xl font-bold text-gray-900" id="${targetId}"></span>
+                    </div>
+                    <div class="brand-bar-container">
+                        <div class="brand-bar ${color}" style="width: 0%"></div>
+                    </div>
+                `;
+                item.innerHTML = barHtml;
+
+                const bar = item.querySelector('.brand-bar');
+                const valEl = item.querySelector(`#${targetId}`);
+                
+                // Animação CSS da largura
+                setTimeout(() => {
+                    bar.style.width = `${safeWidth}%`;
+                    
+                    // Animação do texto do valor
+                    let startTime;
+                    const step = (t) => {
+                         if(!startTime) startTime=t;
+                         const p = Math.min((t-startTime)/ANIMATION_DURATION, 1);
+                         
+                         valEl.textContent = (p*val).toFixed(2) + " MM"; 
+                         
+                         if(p<1) requestAnimationFrame(step);
+                         else valEl.textContent = val.toFixed(2) + " MM";
+                    };
+                    requestAnimationFrame(step);
+
+                }, 50); // Pequeno delay para a animação
+            });
+        }
+
+        // --------------------------------------------------------
+        // Intersection Observer para disparar as animações ao rolar
+        // --------------------------------------------------------
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animatedSections.has(entry.target.id)) {
+                    startSectionAnimations(entry.target);
+                }
+            });
+        }, {
+            // Disparar quando 15% da seção for visível
+            threshold: 0.15
+        });
+
+        /**
+         * Função para disparar todas as animações de uma seção.
+         */
+        function startSectionAnimations(section) {
+            // A dupla verificação aqui é para garantir que a seção não seja animada duas vezes
+            if (animatedSections.has(section.id)) return;
+            animatedSections.add(section.id);
+
+            // 1. Animação dos Contadores (Big Numbers)
+            section.querySelectorAll('[id^="counter"]').forEach(el => {
+                const target = parseFloat(el.getAttribute('data-target'));
+                const decimals = parseInt(el.getAttribute('data-decimals'));
+                // Chama a função de contagem
+                animateCounter(el, 0, target, decimals);
+            });
+
+            // 2. Animação dos Rankings (Barras)
+            section.querySelectorAll('[data-ranking="animated"]').forEach(ranking => {
+                // Chama a função de ranking
+                initializeAndAnimateRanking(ranking);
+            });
+        }
+
+        // Inicializa o Observer depois que o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa o Observer para as seções de conteúdo
+            document.querySelectorAll('section[data-section="animated"]').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
