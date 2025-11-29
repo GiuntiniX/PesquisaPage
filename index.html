@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defesa Comercial: Navegação Principal</title>
+    <!-- Carregamento do Tailwind CSS para estilização moderna e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração de fonte e cores do Tailwind -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Cinza claro */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Container Principal do Cartão -->
+    <div class="w-full max-w-4xl bg-white shadow-2xl rounded-xl p-8 md:p-12">
+
+        <!-- Cabeçalho -->
+        <header class="text-center mb-10 border-b-2 border-indigo-500 pb-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-800 tracking-tight">
+                Portal de Análises e Insights
+            </h1>
+            <p class="mt-2 text-xl text-gray-600 font-medium">
+                Defesa Comercial e Temas Interconectados
+            </p>
+        </header>
+
+        <!-- Seção de Navegação -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Explore Outras Áreas de Foco:</h2>
+
+            <!-- Cartão de Link 1: Saúde e Longevidade da Mulher 40+ -->
+            <a href="mais40bemestar.html" 
+               class="block group p-6 border-2 border-pink-400 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 bg-white hover:bg-pink-50">
+                <div class="flex items-center space-x-4">
+                    <!-- Ícone Temático (Ícone de Coração/Saúde) -->
+                    <div class="p-3 rounded-full bg-pink-100 text-pink-600 group-hover:bg-pink-600 group-hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 18h.01"/><path d="M15 15.5c-.75.36-1.55.65-2.3.88M16 14.5l3.5-2"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-pink-600 transition duration-300">
+                            Saúde e Longevidade da Mulher 40+
+                        </h3>
+                        <p class="text-gray-500 group-hover:text-pink-500 text-sm mt-1">
+                            Acesse análises detalhadas sobre bem-estar e qualidade de vida após os 40.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Cartão de Link 2: Terra Insights: Festivais de Música -->
+            <a href="Defesafestivais.html" 
+               class="block group p-6 border-2 border-purple-400 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 bg-white hover:bg-purple-50">
+                <div class="flex items-center space-x-4">
+                    <!-- Ícone Temático (Ícone de Música/Festival) -->
+                    <div class="p-3 rounded-full bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition duration-300">
+                            Terra Insights: Festivais de Música
+                        </h3>
+                        <p class="text-gray-500 group-hover:text-purple-500 text-sm mt-1">
+                            Insights sobre o mercado, logística e defesa de eventos culturais de grande porte.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Rodapé de Contexto -->
+        <footer class="mt-10 pt-4 border-t border-gray-200 text-center text-sm text-gray-500 space-y-1">
+            <p>Esta página simula um portal de conteúdo focado em temas de Defesa Comercial, com links para áreas correlatas.</p>
+            <p class="font-medium text-gray-700">Desenvolvido por Guilherme Giuntini</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
