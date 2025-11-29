@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Insights: COP30 e Sustentabilidade</title>
+    <!-- Carregamento do Tailwind CSS para estilo e responsividade --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configurações da Paleta de Cores (Verde/Azul para Sustentabilidade) */
+        :root {
+            --color-primary: #10b981; /* Verde Esmeralda (Sustentabilidade) */
+            --color-secondary: #0ea5e9; /* Azul Claro (Global/Tecnologia) */
+            --color-highlight: #dcfce7; /* Fundo claro para destaque */
+        }
+        
+        /* Estilos Globais e Fundo */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Cinza muito claro */
+        }
+
+        .section-header {
+            border-bottom: 3px solid var(--color-primary);
+            padding-bottom: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        .metric-highlight {
+            font-weight: 800;
+            color: var(--color-primary); 
+        }
+        .metric-box {
+            transition: transform 0.3s ease;
+            border-left-color: var(--color-primary);
+        }
+        .metric-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .brand-bar-container {
+            height: 20px;
+            background-color: var(--color-highlight); 
+            border-radius: 9999px;
+            margin-bottom: 4px;
+            overflow: hidden;
+        }
+        .brand-bar {
+            height: 100%;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .text-custom-primary { color: var(--color-primary); }
+
+        /* Estilo para as logos no cabeçalho */
+        .header-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background: none; 
+            border-bottom: 1px solid #ddd;
+        }
+        .header-logos img {
+            filter: none; 
+        }
+
+        /* Estilos do Banner (Estático) */
+        #image-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="min-h-screen pt-12 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto">
+        
+        <!-- CABEÇALHO --><header class="mb-16 relative">
+            
+            <!-- LOGOS: Fundo Transparente --><div class="header-logos px-4 sm:px-0">
+                <!-- Logo Terra --><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Terra_Logo.png/250px-Terra_Logo.png" alt="Logo Terra" class="terra-logo h-12 sm:h-14 w-auto">
+                
+                <!-- Logo Terra Insights --><img src="https://p2.trrsf.com/image/fget/cf/259/80/images.terra.com/2025/01/08/insights-light-qdvhzhm8n3hi.png" alt="Terra Insights Logo" class="new-insights-logo h-12 sm:h-14 w-auto">
+            </div>
+            
+            <!-- BANNER DE IMAGEM ESTÁTICA --><div id="image-banner" class="w-full h-48 sm:h-64 bg-cover bg-center rounded-xl overflow-hidden shadow-lg mb-8 mt-8" 
+                 style="background-image: url('https://www.afdb.org/sites/default/files/banner-webpage-cop30.jpg'); background-size: cover; background-repeat: no-repeat;">
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-10 mb-4 tracking-tight text-center md:text-left">
+                COP30 inspira mudanças no consumo e ações sustentáveis
+            </h1>
+            <p class="text-xl text-gray-600 text-center md:text-left">
+                Pesquisa realizada com pessoas que conhecem a conferência do clima mostra otimismo sobre a atuação do Brasil nas discussões climáticas.
+            </p>
+
+            <!-- RESUMO E METODOLOGIA --><div class="bg-white p-6 rounded-xl shadow-md mt-6 border-t-4 border-l-4" style="border-top-color: var(--color-secondary); border-left-color: var(--color-secondary);">
+                <h2 class="text-2xl font-bold text-gray-800 mb-3">Resumo Executivo</h2>
+                <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+                    Pesquisa realizada pelo Terra Insights aponta que quatro em cada dez brasileiros que já ouviram falar da COP30 consideram que o principal tema a ser discutido é a <span class="font-bold text-green-600">transição para energias renováveis e a redução de emissões (40,38%)</span>. Apesar do interesse, a maioria dos entrevistados tem <span class="font-bold">baixo ou nenhum conhecimento</span> sobre mudanças climáticas (58%). O tema, no entanto, impacta fortemente as decisões de consumo e a percepção sobre o papel do Brasil no cenário global.
+                </p>
+                <p class="text-gray-500 text-xs italic mt-4">
+                    <span class="font-bold">Metodologia:</span> O levantamento foi realizado via plataforma mobile e seguiu critérios demográficos do IBGE.
+                </p>
+            </div>
+        </header>
+
+        <!-- SEÇÃO 1: PRIORIDADES E NÍVEL DE CONHECIMENTO --><section id="prioridades-conhecimento" data-section="animated" class="mb-24">
+            <h2 class="text-3xl font-bold section-header text-custom-primary">1. Prioridades da COP30 e Conhecimento Básico</h2>
+            
+            <!-- Destaques Chave (Big Numbers) --><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Tema Principal da COP30</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter1" data-target="40.38" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Transição para Energias Renováveis e Redução de Emissões.</p>
+                </div>
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Baixo Conhecimento Climático</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter2" data-target="58" data-decimals="0" class="metric-highlight">0</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Apenas baixo ou nenhum conhecimento sobre mudanças climáticas.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Impacto no Consumo</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter3" data-target="46.85" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Deixaria de consumir marcas antiambientais.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Brasil como Protagonista</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter4" data-target="50.62" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Acredita que o Brasil tem papel de destaque no debate.</p>
+                </div>
+            </div>
+
+            <!-- Ranking Temas COP30 --><div class="bg-white p-6 rounded-xl shadow-lg mb-12">
+                <h3 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Principais Temas a Serem Discutidos na COP30</h3>
+                <div id="temas-ranking-chart" data-ranking="animated" data-unit="%" class="space-y-4">
+                    <!-- Max: 40.38% --><div class="ranking-item" data-value="40.38" data-max="40.38" data-label="Transição para Energias Renováveis e Redução de Emissões" data-color="bg-green-600"></div>
+                    <div class="ranking-item" data-value="23.15" data-max="40.38" data-label="Adaptação às Mudanças Climáticas" data-color="bg-green-500"></div>
+                    <div class="ranking-item" data-value="18.31" data-max="40.38" data-label="Tecnologia Sustentável" data-color="bg-green-400"></div>
+                    <div class="ranking-item" data-value="18.15" data-max="40.38" data-label="Financiamento Climático" data-color="bg-green-300"></div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- SEÇÃO 2: AÇÕES INDIVIDUAIS E COMPROMISSO BRASIL --><section id="acoes-compromisso" data-section="animated" class="mb-24">
+            <h2 class="text-3xl font-bold section-header text-custom-primary">2. Ações Individuais e Credibilidade do Brasil</h2>
+            
+            <!-- Ranking Ações Sustentáveis --><div class="bg-white p-6 rounded-xl shadow-lg mb-12">
+                <h3 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Medidas de Sustentabilidade mais Adotadas</h3>
+                <div id="medidas-ranking-chart" data-ranking="animated" data-unit="%" class="space-y-4">
+                    <!-- Max: 29.23% --><div class="ranking-item" data-value="29.23" data-max="29.23" data-label="Redução do Uso de Transportes Individuais" data-color="bg-cyan-600"></div>
+                    <div class="ranking-item" data-value="13.15" data-max="29.23" data-label="Não adota nenhuma medida" data-color="bg-cyan-500"></div>
+                    <div class="ranking-item" data-value="13.08" data-max="29.23" data-label="Redução no consumo de plásticos e descartáveis" data-color="bg-cyan-400"></div>
+                    <div class="ranking-item" data-value="9.46" data-max="29.23" data-label="Coleta Seletiva" data-color="bg-cyan-300"></div>
+                </div>
+            </div>
+
+            <!-- Insights e Ceticismo sobre o Brasil --><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <h3 class="font-bold text-xl mb-2 text-red-700">Ceticismo no Compromisso Nacional</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li><span class="font-bold">Compromisso Fraco (50,15%):</span> Metade do público avalia o compromisso do Brasil com as metas ambientais como fraco.</li>
+                        <li><span class="font-bold">Acordos Internacionais (48,15%):</span> Quase metade acredita que os acordos das COPs são apenas parcialmente cumpridos.</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                    <h3 class="font-bold text-xl mb-2 text-blue-700">Importância da COP30 e Percepção Local</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li><span class="font-bold">Importância do Evento (48,08%):</span> Consideram a COP30 importante para o combate às mudanças climáticas.</li>
+                        <li><span class="font-bold">Infraestrutura de Belém (39,15%):</span> Acham que a cidade não estará preparada para receber o evento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: INFLUÊNCIA NO CONSUMO E MÍDIA --><section id="impacto-consumo-midia" data-section="animated" class="mb-24 bg-gray-50 p-8 rounded-xl shadow-inner">
+            <h2 class="text-3xl font-bold section-header text-gray-700 border-gray-400">3. Impacto nas Compras, Mídia e Influenciadores</h2>
+            
+            <!-- Destaques de Consumo e Mídia --><div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Consideram Postura Ambiental</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter5" data-target="42.62" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Levam em conta a sustentabilidade da marca na compra.</p>
+                </div>
+                
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Busca de Info (Redes Sociais)</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter6" data-target="38.15" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Redes sociais são a principal fonte de informação sobre meio ambiente.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Relevância da Juventude</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter7" data-target="55.46" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Acreditam que a juventude é um grupo relevante na COP30.</p>
+                </div>
+
+                <div class="metric-box bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-500 uppercase font-semibold mb-1">Influenciadores (Acompanham)</p>
+                    <p class="text-4xl font-extrabold text-gray-900 leading-none">
+                        <span id="counter8" data-target="49.92" data-decimals="2" class="metric-highlight">0.00</span>%
+                    </p>
+                    <p class="mt-2 text-sm text-gray-600">Afirmam acompanhar criadores de conteúdo de sustentabilidade.</p>
+                </div>
+            </div>
+
+            <!-- Ranking Benefícios Esperados -->
+            <div class="bg-white p-6 rounded-xl shadow-lg mb-12">
+                <h3 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Principais Benefícios Esperados da COP30 para a População Local</h3>
+                <div id="beneficios-ranking-chart" data-ranking="animated" data-unit="%" class="space-y-4">
+                    <!-- Max: 34.77% --><div class="ranking-item" data-value="34.77" data-max="34.77" data-label="Geração de Empregos" data-color="bg-lime-600"></div>
+                    <div class="ranking-item" data-value="20.92" data-max="34.77" data-label="Melhoria na Infraestrutura Urbana" data-color="bg-lime-500"></div>
+                    <div class="ranking-item" data-value="16.15" data-max="34.77" data-label="Visibilidade Internacional" data-color="bg-lime-400"></div>
+                </div>
+            </div>
+
+            <!-- Insights de Influência e Abordagem --><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-700">
+                    <h3 class="font-bold text-xl mb-2 text-green-700">Abordagem de Influenciadores Mais Valorizada</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        A abordagem mais valorizada pelos entrevistados é a de <span class="font-bold">explicações claras e didáticas sobre temas ambientais (41,31%)</span>, superando o alcance ou credibilidade como fator isolado.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-700">
+                    <h3 class="font-bold text-xl mb-2 text-blue-700">Grupos Mais Influentes na COP30</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li><span class="font-bold">Governos:</span> 37,54%</li>
+                        <li><span class="font-bold">Setor Privado:</span> 22,69%</li>
+                        <li><span class="font-bold">ONGs:</span> 20,62%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé --><footer class="mt-16 text-center text-xs text-gray-500 border-t pt-4 pb-8">
+            <p>&copy; 2025 Pesquisa Terra Insights: COP30 e Sustentabilidade. Dados IBGE.</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT DE ANIMAÇÃO --><script>
+        const ANIMATION_DURATION = 1500; 
+        let animatedSections = new Set();
+        
+        /**
+         * Animação de contagem para números em % ou valor puro.
+         */
+        function animateCounter(element, start, end, decimals) {
+            let startTime;
+            const step = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                const percentage = Math.min(progress / ANIMATION_DURATION, 1);
+                let current = percentage * (end - start) + start;
+                
+                // Arredondamento e formatação mais robustos
+                element.textContent = current.toFixed(decimals);
+
+                if (progress < ANIMATION_DURATION) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    element.textContent = end.toFixed(decimals);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        /**
+         * Cria e anima as barras de ranking.
+         */
+        function initializeAndAnimateRanking(rankingContainer) {
+            if (animatedSections.has(rankingContainer.id)) return;
+            animatedSections.add(rankingContainer.id);
+
+            const unit = rankingContainer.getAttribute('data-unit') || '';
+
+            rankingContainer.querySelectorAll('.ranking-item').forEach(item => {
+                const val = parseFloat(item.getAttribute('data-value'));
+                const max = parseFloat(item.getAttribute('data-max'));
+                const label = item.getAttribute('data-label');
+                const color = item.getAttribute('data-color');
+                
+                // 1. Cria um ID seguro
+                const safeLabelId = label.replace(/[^a-zA-Z0-9]/g, ''); 
+                const targetId = `${item.parentElement.id}-${safeLabelId}-value`;
+                
+                // Calcula a largura de forma segura (máximo 100%)
+                const safeWidth = Math.min(100, (val / max) * 100);
+
+                // Cria a estrutura da barra
+                const barHtml = `
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-medium text-sm sm:text-lg">${label}</span>
+                        <span class="text-sm sm:text-xl font-bold text-gray-900" id="${targetId}"></span>
+                    </div>
+                    <div class="brand-bar-container">
+                        <div class="brand-bar ${color}" style="width: 0%"></div>
+                    </div>
+                `;
+                item.innerHTML = barHtml;
+
+                const bar = item.querySelector('.brand-bar');
+                const valEl = item.querySelector(`#${targetId}`);
+                
+                // Animação CSS da largura
+                setTimeout(() => {
+                    bar.style.width = `${safeWidth}%`;
+                    
+                    // Animação do texto do valor
+                    let startTime;
+                    const step = (t) => {
+                         if(!startTime) startTime=t;
+                         const p = Math.min((t-startTime)/ANIMATION_DURATION, 1);
+                         
+                         // Define a precisão do arredondamento para a animação. Usamos toFixed(2)
+                         valEl.textContent = (p*val).toFixed(2) + unit; 
+                         
+                         if(p<1) requestAnimationFrame(step);
+                         else valEl.textContent = val.toFixed(2) + unit;
+                    };
+                    requestAnimationFrame(step);
+
+                }, 50); // Pequeno delay para a animação
+            });
+        }
+
+        // --------------------------------------------------------
+        // Intersection Observer para disparar as animações ao rolar
+        // --------------------------------------------------------
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animatedSections.has(entry.target.id)) {
+                    startSectionAnimations(entry.target);
+                }
+            });
+        }, {
+            // Disparar quando 15% da seção for visível
+            threshold: 0.15
+        });
+
+        /**
+         * Função para disparar todas as animações de uma seção.
+         */
+        function startSectionAnimations(section) {
+            // A dupla verificação aqui é para garantir que a seção não seja animada duas vezes
+            if (animatedSections.has(section.id)) return;
+            animatedSections.add(section.id);
+
+            // 1. Animação dos Contadores (Big Numbers)
+            section.querySelectorAll('[id^="counter"]').forEach(el => {
+                const target = parseFloat(el.getAttribute('data-target'));
+                const decimals = parseInt(el.getAttribute('data-decimals'));
+                // Chama a função de contagem
+                animateCounter(el, 0, target, decimals);
+            });
+
+            // 2. Animação dos Rankings (Barras)
+            section.querySelectorAll('[data-ranking="animated"]').forEach(ranking => {
+                // Chama a função de ranking
+                initializeAndAnimateRanking(ranking);
+            });
+        }
+
+        // Inicializa o Observer depois que o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa o Observer para as seções de conteúdo
+            document.querySelectorAll('section[data-section="animated"]').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
